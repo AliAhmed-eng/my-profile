@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Ahmed</title>
+    <style>
+        body {
+            background: #213555;
+            color: aliceblue;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        header {
+            width: 100%;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 4rem;
+            background-color: #333;
+            color: #fff;
+            z-index: 1000;
+        }
+        .navbar ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar li {
+            list-style: none;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: aqua;
+        }
+
+        #home {
+            margin-top: 80px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #home .continer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        #home img {
+            border-radius: 100px;
+            box-shadow: 4px 4px 6px #3E5879;
+            max-width: 150px;
+            height: auto;
+            position: relative;
+            bottom: 10px;
+        }
+        .info{
+            position: relative;
+            bottom: 100px;
+        }
+
+        .info p{
+            font-size: 25px;
+        }
+        #home h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, rgb(5, 5, 104), rgb(6, 224, 231), rgb(234, 4, 234));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .about {
+            padding: 2rem;
+            text-align: center;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #007BFF;
+        }
+
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            max-width: 600px;
+            padding-left: 1rem;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #007BFF;
+        }
+        .timeline-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .timeline-item .circle {
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 4px solid #007BFF;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        
+           
+
+        .timeline-item .content {
+            margin-left: 40px;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 900px;
+        }
+        @media screen and (max-width: 768px) {
+            .navbar {
+                padding: 0.5rem 2rem;
+            }
+            #home .continer {
+                flex-direction: column;
+            }
+
+            .timeline:before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .timeline-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .timeline-item .circle {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .timeline-item .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">ALI AHMED</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="continer">
+            <img src="dp.jpg" alt="Profile Picture">
+            <div class="info">
+                <h2>Hi, I am a</h2>
+                <h1>Web Designer</h1>
+                <p>I’m a passionate web designer dedicated to crafting visually stunning and user-friendly websites. With a keen eye for design and a focus on responsive, intuitive layouts, I bring ideas to life on the web.</p>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>I'm a dedicated professional with a passion for learning and growth. Here's a quick look at my educational journey:</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <h3>Bachelor of Science Information Technology</h3>
+                    <p>Air University, Islamabad (F-24)</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <h3>FSc Pre-Engineering</h3>
+                    <p>Punjab Group of Colleges, Rawalpindi (2022-2024)</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <h3>Certifications</h3>
+                    <p>Completed various online courses in web development and design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="about">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me via email or phone:</p>
+        <p><strong>Phone:</strong> +123 456 7890</p>
+        <p><strong>Email:</strong> ali.ahmed@example.com</p>
+    </section>
+</body>
+</html>
